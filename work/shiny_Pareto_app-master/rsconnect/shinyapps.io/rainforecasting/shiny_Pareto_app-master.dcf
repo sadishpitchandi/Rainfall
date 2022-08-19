@@ -1,0 +1,13 @@
+name: shiny_Pareto_app-master
+title: shiny_Pareto_app-master
+username:
+account: rainforecasting
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6764588
+bundleId: 6187660
+url: https://rainforecasting.shinyapps.io/shiny_Pareto_app-master/
+when: 1660132140.82397
+lastSyncTime: 1660132140.82399
+asMultiple: FALSE
+asStatic: FALSE
