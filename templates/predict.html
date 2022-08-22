@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transfer Rows Between Two HTML Table</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            
+            .container{overflow: hidden}
+            .tab{float: left}
+            .tab-btn{margin: 50px;}
+            button{display:block;margin-bottom: 20px;}
+            tr{transition:all .25s ease-in-out}
+            tr:hover{background-color: #ddd;}
+            
+        </style>    
+    </head>
+    <body>
+        
+        <div class="container">
+            
+            <div class="tab">
+                <<table id="table1" border="1" class="dataframe">
+                  <thead>
+                  <tr style="text-align: right;">
+                    <th></th>
+                    <th>DATE </th> 
+                    
+                    <th>JAN  </th>
+                    <th>FEB   </th>
+                    <th>MAR   </th>
+                    <th>APR  </th>
+                    <th>MAY   </th>
+                    <th>JUN   </th>
+                    <th>JUL   </th>
+                    <th>AUG  </th>
+                    <th>SEP   </th>
+                    <th>OCT   </th>
+                    <th>NOV   </th>
+                    <th>DEC   </th>
+                    <th>Select <input type="checkbox"names="check-setect">  </th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                      <th>0</th>
+                      <td>01 </td>
+                      <td>1.4 </td>
+                      <td>19.6</td>
+                      <td>0.0</td>
+                      <td>6.9</td>
+                      <td>16.4</td>
+                      <td>1.0</td>
+                      <td>77.2</td>
+                      <td>183.4</td>
+                      <td>320.5</td>
+                      <td>7.5</td>
+                      <td>304.8</td>
+                      <td>680.4</td>
+                      
+                        <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                     <tr>
+                      <th>1</th>
+                      <td>02  </td>
+                      <td>2.8 </td>
+                      <td>19.6</td>
+                      <td>0.0</td>
+                      <td>7.5</td>
+                      <td>17.1</td>
+                      <td>1.8</td>
+                      <td>79.4</td>
+                      <td>185.9</td>
+                      <td>323.7</td>
+                      <td>10.7</td>
+                      <td>320.3</td>
+                      <td>697.2</td>
+                      
+                        <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>03  </td>
+                      <td>3.6   </td>
+                      <td>19.7</td>
+                      <td>0.0</td>
+                      <td>7.5</td>
+                      <td>17.4</td>
+                      <td>2.1</td>
+                      <td>83.4</td>
+                      <td>189.9</td>
+                      <td>326.8</td>
+                      <td>17.5</td>
+                      <td>334.6</td>
+                      <td>710.8</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>04  </td>
+                      <td>4.5 </td>
+                      <td>19.8</td>
+                      <td>0.2</td>
+                      <td>7.6</td>
+                      <td>19.5</td>
+                      <td>3.2</td>
+                      <td>84.6</td>
+                      <td>194.6</td>
+                      <td>333.0</td>
+                      <td>22.7</td>
+                      <td>349.6</td>
+                      <td>722.5</td>
+                      
+
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>4</th>
+                      <td>05 </td>
+                      <td>5.5 </td>
+                      <td>19.8</td>
+                      <td>0.3</td>
+                      <td>8.0</td>
+                      <td>20.3</td>
+                      <td>9.0</td>
+                      <td>86.5</td>
+                      <td>198.0</td>
+                      <td>336.5</td>
+                      <td>28.5</td>
+                      <td>371.8</td>
+                      <td>733.8</td>
+                      
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>5</th>
+                      <td>06   </td>
+                      <td>5.9 </td>
+                      <td>19.9</td>
+                      <td>0.6</td>
+                      <td>9.6</td>
+                      <td>21.7</td>
+                      <td>9.5</td>
+                      <td>91.6</td>
+                      <td>201.6</td>
+                      <td>338.9</td>
+                      <td>34.2</td>
+                      <td>389.8</td>
+                      <td>741.2</td>
+                      
+
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>6</th>
+                      <td>07</td>
+                      <td>6.8</td>
+                      <td>20.4</td>
+                      <td>0.8</td>
+                      <td>9.7</td>
+                      <td>25.6</td>
+                      <td>13.1</td>
+                      <td>93.3</td>
+                      <td>207.8</td>
+                      <td>340.9</td>
+                      <td>39.3</td>
+                      <td>408.1</td>
+                      <td>748.3</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>7</th>
+                      <td>08</td>
+                      <td>7.3</td>
+                      <td>20.6</td>
+                      <td>0.8</td>
+                      <td>9.7</td>
+                      <td>30.9</td>
+                      <td>15.0</td>
+                      <td>95.3</td>
+                      <td>209.8</td>
+                      <td>344.5</td>
+                      <td>42.5</td>
+                      <td>420.9</td>
+                      <td>753.9</td>
+                       
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>8</th>
+                      <td>09</td>
+                      <td>7.8</td>
+                      <td>20.6</td>
+                      <td>0.8</td>
+                      <td>9.7</td>
+                      <td>32.6</td>
+                      <td>18.6</td>
+                      <td>98.1</td>
+                      <td>212.9</td>
+                      <td>347.1</td>
+                      <td>46.9</td>
+                      <td>433.2</td>
+                      <td>759.9</td>
+                    
+
+                      <td><input type="checkbox" name="check-tab1"></td> 
+                    </tr>
+                    <tr>
+                      <th>9</th>
+                      <td>10</td>
+                      <td>8.1</td>
+                      <td>20.7</td>
+                      <td>1.6</td>
+                      <td>9.8</td>
+                      <td>32.7</td>
+                      <td>19.5</td>
+                      <td>101.8</td>
+                      <td>216.9</td>
+                      <td>353.0</td>
+                      <td>51.7</td>
+                      <td>443.4</td>
+                      <td>764.9</td>
+                      
+
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>10</th>
+                      <td>11</td>
+                      <td>8.5</td>
+                      <td>20.7</td>
+                      <td>1.6</td>
+                      <td>9.9</td>
+                      <td>34.4</td>
+                      <td>23.0</td>
+                      <td>104.7</td>
+                      <td>222.9</td>
+                      <td>360.1</td>
+                      <td>55.1</td>
+                      <td>450.2</td>
+                      <td>770.9</td>
+                     
+
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>11</th>
+                      <td>12</td>
+                      <td>9.2</td>
+                      <td>20.8</td>
+                      <td>2.2</td>
+                      <td>11.1</td>
+                      <td>37.3</td>
+                      <td>24.6</td>
+                      <td>110.7</td>
+                      <td>227.1</td>
+                      <td>365.8</td>
+                      <td>59.1</td>
+                      <td>470.1</td>
+                      <td>776.0</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>12</th>
+                      <td>13</td>
+                      <td>11.4</td>
+                      <td>21.2</td>
+                      <td>2.2</td>
+                      <td>11.7</td>
+                      <td>38.1</td>
+                      <td>27.6</td>
+                      <td>113.9</td>
+                      <td>229.1</td>
+                      <td>368.8</td>
+                      <td>68.2</td>
+                      <td>504.2</td>
+                      <td>784.1</td>
+                    
+                      <td><input type="checkbox" name="check-tab1"></td> 
+                    </tr>
+                    <tr>
+                      <th>13</th>
+                      <td>14</td>
+                      <td>13.0</td>
+                      <td>22.0</td>
+                      <td>2.6</td>
+                      <td>12.2</td>
+                      <td>38.5</td>
+                      <td>36.2</td>
+                      <td>115.7</td>
+                      <td>233.1</td>
+                      <td>373.1</td>
+                      <td>71.8</td>
+                      <td>517.4</td>
+                      <td>787.9</td>
+
+                      <td><input type="checkbox" name="check-tab1"></td>
+                      
+                    </tr>
+                    <tr>
+                      <th>14</th>
+                      <td>15</td>
+                      <td>14.1</td>
+                      <td>22.5</td>
+                      <td>3.3</td>
+                      <td>12.5</td>
+                      <td>38.8</td>
+                      <td>41.9</td>
+                      <td>121.0</td>
+                      <td>240.2</td>
+                      <td>378.8</td>
+                      <td>75.4</td>
+                      <td>525.7</td>
+                      <td>792.3</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>15</th>
+                      <td>16</td>
+                      <td>16.0</td>
+                      <td>22.9</td>
+                      <td>3.3</td>
+                      <td>12.6</td>
+                      <td>40.2</td>
+                      <td>42.9</td>
+                      <td>125.4</td>
+                      <td>245.9</td>
+                      <td>382.0</td>
+                      <td>82.7</td>
+                      <td>541.7</td>
+                      <td>798.3</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>16</th>
+                      <td>17</td>
+                      <td>16.3</td>
+                      <td>29.3</td>
+                      <td>3.3</td>
+                      <td>12.6</td>
+                      <td>42.9</td>
+                      <td>43.2</td>
+                      <td>128.4</td>
+                      <td>253.0</td>
+                      <td>390.9</td>
+                      <td>91.8</td>
+                      <td>552.6</td>
+                      <td>801.5</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>17</th>
+                      <td>18</td>
+                      <td>17.0</td>
+                      <td>29.5</td>
+                      <td>3.5</td>
+                      <td>12.8</td>
+                      <td>44.9</td>
+                      <td>45.5</td>
+                      <td>130.4</td>
+                      <td>259.5</td>
+                      <td>394.7</td>
+                      <td>110.0</td>
+                      <td>561.5</td>
+                      <td>804.4</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>18</th>
+                      <td>19</td>
+                      <td>17.2</td>
+                      <td>29.6</td>
+                      <td>3.5</td>
+                      <td>12.8</td>
+                      <td>47.5</td>
+                      <td>48.0</td>
+                      <td>132.1</td>
+                      <td>263.4</td>
+                      <td>402.1</td>
+                      <td>119.4</td>
+                      <td>569.8</td>
+                      <td>808.0</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>19</th>
+                      <td>20</td>
+                      <td>17.2</td>
+                      <td>29.7</td>
+                      <td>3.5</td>
+                      <td>12.8</td>
+                      <td>50.3</td>
+                      <td>50.0</td>
+                      <td>134.8</td>
+                      <td>268.7</td>
+                      <td>407.4</td>
+                      <td>130.0</td>
+                      <td>573.5</td>
+                      <td>812.6</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>20</th>
+                      <td>21</td>
+                      <td>17.2</td>
+                      <td>29.7</td>
+                      <td>3.7</td>
+                      <td>12.8</td>
+                      <td>50.9</td>
+                      <td>52.2</td>
+                      <td>138.9</td>
+                      <td>272.7</td>
+                      <td>411.0</td>
+                      <td>138.4</td>
+                      <td>579.6</td>
+                      <td>817.6</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>21</th>
+                      <td>22</td>
+                      <td>17.3</td>
+                      <td>29.8</td>
+                      <td>5.1</td>
+                      <td>13.2</td>
+                      <td>51.7</td>
+                      <td>55.1</td>
+                      <td>141.0</td>
+                      <td>276.6</td>
+                      <td>413.9</td>
+                      <td>146.5</td>
+                      <td>590.0</td>
+                      <td>822.5</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>22</th>
+                      <td>23</td>
+                      <td>17.4</td>
+                      <td>31.5</td>
+                      <td>5.2</td>
+                      <td>13.8</td>
+                      <td>51.8</td>
+                      <td>58.6</td>
+                      <td>143.1</td>
+                      <td>281.1</td>
+                      <td>416.6</td>
+                      <td>155.8</td>
+                      <td>596.4</td>
+                      <td>827.3</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>23</th>
+                      <td>24</td>
+                      <td>17.4</td>
+                      <td>34.2</td>
+                      <td>5.3</td>
+                      <td>13.8</td>
+                      <td>52.7</td>
+                      <td>60.9</td>
+                      <td>148.6</td>
+                      <td>283.8</td>
+                      <td>421.5</td>
+                      <td>169.7</td>
+                      <td>610.5</td>
+                      <td>832.5</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>24</th>
+                      <td>25</td>
+                      <td>17.5</td>
+                      <td>34.9</td>
+                      <td>5.4</td>
+                      <td>14.1</td>
+                      <td>53.2</td>
+                      <td>62.1</td>
+                      <td>152.6</td>
+                      <td>293.5</td>
+                      <td>429.2</td>
+                      <td>184.3</td>
+                      <td>631.3</td>
+                      <td>834.4</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>25</th>
+                      <td>26</td>
+                      <td>17.7</td>
+                      <td>34.9</td>
+                      <td>5.4</td>
+                      <td>15.6</td>
+                      <td>56.0</td>
+                      <td>63.8</td>
+                      <td>158.4</td>
+                      <td>295.2</td>
+                      <td>434.0</td>
+                      <td>196.8</td>
+                      <td>641.5</td>
+                      <td>838.8</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>26</th>
+                      <td>27</td>
+                      <td>18.4</td>
+                      <td>35.7</td>
+                      <td>5.9</td>
+                      <td>15.6</td>
+                      <td>56.4</td>
+                      <td>66.5</td>
+                      <td>161.7</td>
+                      <td>300.3</td>
+                      <td>437.7</td>
+                      <td>216.3</td>
+                      <td>655.1</td>
+                      <td>839.8</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>27</th>
+                      <td>28-Jan</td>
+                      <td>18.9</td>
+                      <td>35.9</td>
+                      <td>5.9</td>
+                      <td>15.8</td>
+                      <td>56.4</td>
+                      <td>68.7</td>
+                      <td>166.9</td>
+                      <td>303.8</td>
+                      <td>443.5</td>
+                      <td>234.5</td>
+                      <td>664.3</td>
+                      <td>842.8</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>28</th>
+                      <td>29</td>
+                      <td>19.2</td>
+                      <td>NaN</td>
+                      <td>5.9</td>
+                      <td>15.8</td>
+                      <td>56.5</td>
+                      <td>72.7</td>
+                      <td>172.9</td>
+                      <td>306.1</td>
+                      <td>451.0</td>
+                      <td>256.2</td>
+                      <td>667.3</td>
+                      <td>844.7</td>
+                      <<td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>29</th>
+                      <td>30</td>
+                      <td>19.3</td>
+                      <td>NaN</td>
+                      <td>5.9</td>
+                      <td>15.9</td>
+                      <td>57.1</td>
+                      <td>74.8</td>
+                      <td>176.2</td>
+                      <td>311.5</td>
+                      <td>458.7</td>
+                      <td>273.0</td>
+                      <td>673.5</td>
+                      <td>850.8</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                    <tr>
+                      <th>30</th>
+                      <td>31</td>
+                      <td>19.5</td>
+                      <td>NaN</td>
+                      <td>5.9</td>
+                      <td>NaN</td>
+                      <td>57.5</td>
+                      <td>NaN</td>
+                      <td>178.6</td>
+                      <td>316.9</td>
+                      <td>NaN</td>
+                      <td>292.7</td>
+                      <td>NaN</td>
+                      <td>853.3</td>
+                      <td><input type="checkbox" name="check-tab1"></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            
+            <div class="tab tab-btn">
+                <button onclick="tab1_To_tab2();">>>>>></button>
+                <button onclick="tab2_To_tab1();"><<<<<</button>
+            </div>
+            
+            <div class="tab">
+                <table id="table2" border="1">
+                    <tr>
+                      <th>  </th>
+                      <th>DATE <input type="checkbox"names="check-date"></th> 
+                      
+                      <th>JAN  <input type="checkbox"names="check-jan"> </th>
+                      <th>FEB  <input type="checkbox"names="check-feb"> </th>
+                      <th>MAR  <input type="checkbox"names="check-mar"> </th>
+                      <th>APR  <input type="checkbox"names="check-apr"> </th>
+                      <th>MAY  <input type="checkbox"names="check-may"> </th>
+                      <th>JUN  <input type="checkbox"names="check-jun"> </th>
+                      <th>JUL  <input type="checkbox"names="check-jul"> </th>
+                      <th>AUG  <input type="checkbox"names="check-aug"> </th>
+                      <th>SEP  <input type="checkbox"names="check-sep"> </th>
+                      <th>OCT  <input type="checkbox"names="check-oct"> </th>
+                      <th>NOV  <input type="checkbox"names="check-nov"> </th>
+                      <th>DEC  <input type="checkbox"names="check-dec"> </th>
+
+                      
+                    </tr>
+                </table>   
+            </div>
+        
+        
+        <script>
+            
+            function tab1_To_tab2()
+            {
+                var table1 = document.getElementById("table1"),
+                    table2 = document.getElementById("table2"),
+                    checkboxes = document.getElementsByName("check-tab1");
+            console.log("Val1 = " + checkboxes.length);
+                 for(var i = 0; i < checkboxes.length; i++)
+                     if(checkboxes[i].checked)
+                        {
+                            // create new row and cells
+                            var newRow = table2.insertRow(table2.length),
+                                cell1 = newRow.insertCell(0),
+                                cell2 = newRow.insertCell(1),
+                                cell3 = newRow.insertCell(2),
+                                cell4 = newRow.insertCell(3);
+                                cell5 = newRow.insertCell(4);
+                                cell6 = newRow.insertCell(5);
+                                cell7 = newRow.insertCell(6);
+                                cell8 = newRow.insertCell(7);
+                                cell9 = newRow.insertCell(8);
+                                cell10 = newRow.insertCell(9);
+                                cell11 = newRow.insertCell(10);
+                                cell12 = newRow.insertCell(11);
+                                cell13 = newRow.insertCell(12);
+                                cell14 = newRow.insertCell(13);
+                    
+                            // add values to the cells
+                            cell1.innerHTML = table1.rows[i+1].cells[0].innerHTML;
+                            cell2.innerHTML = table1.rows[i+1].cells[1].innerHTML;
+                            cell3.innerHTML = table1.rows[i+1].cells[2].innerHTML;
+                            cell4.innerHTML = table1.rows[i+1].cells[3].innerHTML;
+                            cell5.innerHTML = table1.rows[i+1].cells[4].innerHTML;
+                            cell6.innerHTML = table1.rows[i+1].cells[5].innerHTML;
+                            cell7.innerHTML = table1.rows[i+1].cells[6].innerHTML;
+                            cell8.innerHTML = table1.rows[i+1].cells[7].innerHTML;
+                            cell9.innerHTML = table1.rows[i+1].cells[8].innerHTML;
+                            cell10.innerHTML = table1.rows[i+1].cells[9].innerHTML;
+                            cell11.innerHTML = table1.rows[i+1].cells[10].innerHTML;
+                            cell12.innerHTML = table1.rows[i+1].cells[11].innerHTML;
+                            cell13.innerHTML = table1.rows[i+1].cells[12].innerHTML;
+                            cell14.innerHTML = table1.rows[i+1].cells[13].innerHTML;
+                            
+                            //cell14.innerHTML = "<input type='checkbox' name='check-tab2'>";
+                           
+                            // remove the transfered rows from the first table [table1]
+                            var index = table1.rows[i+1].rowIndex;
+                            table1.deleteRow(index);
+                            // we have deleted some rows so the checkboxes.length have changed
+                            // so we have to decrement the value of i
+                            i--;
+                           console.log(checkboxes.length);
+                        }
+            }
+            
+          </script>    
+
+            <div class="tab tab-btn">
+                <button onclick="tab2_To_tab3();">>>>>></button>
+                
+            </div>
+
+            <div class="tab">
+              <table id="table3" border="1">
+                  <tr>
+                    <th>  </th>
+                    <th>DATE <input type="checkbox"names="check-date"></th> 
+                    
+                    <th>result  <input type="checkbox"names="check-jan"> </th>
+                    
+
+
+
+
+
+
+                    <script>
+            
+                      function tab2_To_tab3()
+                      {
+                          var table2 = document.getElementById("table2"),
+                              table3 = document.getElementById("table3"),
+                              checkboxes = document.getElementsByName("check-tab2");
+                      console.log("Val1 = " + checkboxes.length);
+                           for(var i = 0; i < checkboxes.length; i++)
+                               if(checkboxes[i].checked)
+                                  {
+                                      // create new row and cells
+                                      var newRow = table2.insertRow(table2.length),
+                                          cell1 = newRow.insertCell(0),
+                                          cell2 = newRow.insertCell(1),
+                                          cell3 = newRow.insertCell(2),
+                                          cell4 = newRow.insertCell(3);
+                                          cell5 = newRow.insertCell(4);
+                                          cell6 = newRow.insertCell(5);
+                                          cell7 = newRow.insertCell(6);
+                                          cell8 = newRow.insertCell(7);
+                                          cell9 = newRow.insertCell(8);
+                                          cell10 = newRow.insertCell(9);
+                                          cell11 = newRow.insertCell(10);
+                                          cell12 = newRow.insertCell(11);
+                                          cell13 = newRow.insertCell(12);
+                                          cell14 = newRow.insertCell(13);
+                              
+                                      // add values to the cells
+                                      cell1.innerHTML = table1.rows[i+1].cells[0].innerHTML;
+                                      cell2.innerHTML = table1.rows[i+1].cells[1].innerHTML;
+                                      cell3.innerHTML = table1.rows[i+1].cells[2].innerHTML;
+                                      cell4.innerHTML = table1.rows[i+1].cells[3].innerHTML;
+                                      cell5.innerHTML = table1.rows[i+1].cells[4].innerHTML;
+                                      cell6.innerHTML = table1.rows[i+1].cells[5].innerHTML;
+                                      cell7.innerHTML = table1.rows[i+1].cells[6].innerHTML;
+                                      cell8.innerHTML = table1.rows[i+1].cells[7].innerHTML;
+                                      cell9.innerHTML = table1.rows[i+1].cells[8].innerHTML;
+                                      cell10.innerHTML = table1.rows[i+1].cells[9].innerHTML;
+                                      cell11.innerHTML = table1.rows[i+1].cells[10].innerHTML;
+                                      cell12.innerHTML = table1.rows[i+1].cells[11].innerHTML;
+                                      cell13.innerHTML = table1.rows[i+1].cells[12].innerHTML;
+                                      cell14.innerHTML = table1.rows[i+1].cells[13].innerHTML;
+                                      
+                                      //cell14.innerHTML = "<input type='checkbox' name='check-tab2'>";
+                                     
+                                      // remove the transfered rows from the first table [table1]
+                                      var index = table1.rows[i+1].rowIndex;
+                                      table1.deleteRow(index);
+                                      // we have deleted some rows so the checkboxes.length have changed
+                                      // so we have to decrement the value of i
+                                      i--;
+                                     console.log(checkboxes.length);
+                                  }
+                      }
+                      
+                    </script>  
+                    
+                  </tr>
+              </table>   
+          </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+           
+           
+       </div> 
+    </body>
+</html>

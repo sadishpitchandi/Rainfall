@@ -18,12 +18,25 @@
         .dropdown-submenu .dropdown-menu {
           top: 0;
           left: 100%;
+          width: 260px;
+          height: 34px;
           margin-top: -1px;
         }
         </style>
 
 
 
+    <style>
+         styled-select {
+                width: 260px;
+                height: 364px;
+                overflow: hidden;
+                background: url("../img/downarrow_blue.png") no-repeat right #fff;
+                border: 1px solid #ccc;
+                margin:auto;
+                border-radius:6px;
+            }
+        </style>
     <style>
    
         .col-md-2 {
@@ -92,13 +105,7 @@
         <div class="grid">
            <div>
             <a href="/">Home</a>
-            <a href="/predict">Know Medical Cost</a>
-            <a href="/logs">View Logs</a>
-            <a href="/artifact">View Artifacts</a>
-            <a href="/saved_models">View Trained Model</a>
-            <a href="/train">Train Model</a>
-            <a href="/view_experiment_hist">Experiment History</a>
-            <a href="/update_model_config">Update Model Config</a>
+ 
            </div>
         </div>
 
@@ -112,9 +119,9 @@
 
 
                     <div class="container">
-                                      
+                        <div id="styled-select">               
                         <div class="dropdown">
-                          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"> DISTRICTS
+                          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"> DISTRICTSs
                           <span class="caret"></span></button>
                           <ul class="dropdown-menu">
                             
@@ -171,21 +178,28 @@
 
 
 
-
+                        <div class="demo-container">
+                            <a href="data:C:\sadish\project\machine learning\Rainfall\work\CHENNAI\CH_NUNGAMBAKKAM.csv;
+                        " download="data.csv">
+                                <button>DOWNLOAD</button>
+                            </a>
+                        </div>
 
 
 
                     
                     
+                        <label for="penta data">EXTRACT THE PENTA DATA (month and DATE):</label>
+                        <input type="month" id="date" name="date"><br><br>
 
+                        <label for="fname">start date:</label>
+                        <input type="text" id="fname" name="fname"><br><br>
+                        <label for="lname">End date:</label>
+                        <input type="text" id="lname" name="lname"><br><br>
+                    
+                    <input type="submit">
+                      
 
-
-                    <li class="row lst_grp"><a href="/eda">EDA</a></li>
-                    <li class="row lst_grp"><a href="/logs">View Logs</a></li>
-                    <li class="row lst_grp"><a href="/artifact">View Artifacts</a></li>
-                    <li class="row lst_grp"><a href="/saved_models">View Trained Models</a></li>
-                    <li class="row lst_grp"><a href="/train">Train Insurance Premium Estimator</a></li>
-                    <li class="row lst_grp"><a href="/update_model_config">Update Model Config</a></li>   
                 </ul>
             </div>
             <div class="col-md-8 col-sm-12 col-lg-9" style="margin-top:20px;width:78%;"> 
