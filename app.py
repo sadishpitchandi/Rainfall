@@ -7,7 +7,7 @@ app=Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     try:
-        return render_template('index.HTML')
+        return render_template('index.html')
     except Exception as e:
         return str(e)  
 
